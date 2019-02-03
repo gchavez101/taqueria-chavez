@@ -10,7 +10,7 @@ var serveStatic = require('serve-static');
 // var transporter = nodemailer.createTransport();
 // var sgTransport = require('nodemailer-sendgrid-transport');
 // var Mailchimp = require('mailchimp-api-v3')
-// var mailchimpApi = new Mailchimp('b7e9e14984b53e6859983f299ada049d-us19');
+// var mailchimpApi = new Mailchimp('');
 // var mailer = nodemailer.createTransport(sgTransport(options));
 
 
@@ -39,7 +39,7 @@ app.use(serveStatic(require("path").join(__dirname, "/views"))); // Serves every
 
 //     var email = {
 //         from: data.email, // sender address
-//         to: 'gchavez101@gmail.com', // list of receivers
+//         to: '', // list of receivers
 //         subject: 'From Contact form in Taqueria Chavez: ' + data.subject, // Subject line
 //         text: data.text, // plaintext body
 //         html: data.text // html body
