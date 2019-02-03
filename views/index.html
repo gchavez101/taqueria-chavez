@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      
+<html class="no-js lt-ie9 lt-ie8 lt-ie7">
+   <![endif]-->
+<!--[if IE 7]>         
+   <html class="no-js lt-ie9 lt-ie8">
+      <![endif]-->
+<!--[if IE 8]>         
+      <html class="no-js lt-ie9">
+         <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head ng-app="taq">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Taqueria Chavez</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Food Truck in Las Cruces New Mexico" />
+    <meta name="keywords" content="food, mexican food, tacos, tortas, quesadillas, shrimp" />
+    <meta name="author" content="gonzalochavez.com" />
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic|Merriweather:300,400italic,300italic,400,700italic' rel='stylesheet' type='text/css'>
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="css/icomoon.css">
+    <!-- Simple Line Icons -->
+    <link rel="stylesheet" href="css/simple-line-icons.css">
+    <!-- Datetimepicker -->
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+    <!-- Flexslider -->
+    <link rel="stylesheet" href="css/flexslider.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.js"></script>-->
+    <!-- Modernizr JS -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+               <script src="js/respond.min.js"></script>
+               <![endif]-->
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1346656038803768');
+  fbq('track', 'PageView');
+</script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1346656038803768&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-72474119-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body ng-controller="taqCtrl">
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  if (d.getElementById(id)) return;
+                  js = d.createElement(s); js.id = id;
+                  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+                  fjs.parentNode.insertBefore(js, fjs);
+                  }(document, 'script', 'facebook-jssdk'));
+               </script>
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat" attribution=setup_tool page_id="545919928850477" theme_color="#fb6e14"></div>
+    <div id="fh5co-container">
+        <div id="fh5co-home" class="js-fullheight" data-section="home">
+            <div class="flexslider">
+                <div class="fh5co-overlay"></div>
+                <div class="fh5co-text">
+                    <div class="container">
+                        <div class="row">
+                            <!--<h2 class="to-animate">Welcome to</h2>-->
+                            <h1 class="to-animate">Taqueria Chavez</h1>
+                            <h4><a href="tel:+1-575-650-2847">Contact us at: 575-650-2847</a></h4>
+                            <h4 style="color:white;" class="to-animate">We accept Credit Card Payments through Square!</h4>
+                            <hr>
+                            <p><a href="https://goo.gl/maps/F45CNtUxAGR2">Location: 1400 East Lohman, Las Cruces, NM 88001</a></p>
+                            <h4 style="color:white;" class="to-animate">Hours: M-F: 8:30 - 5:00 • Sat: 8:30 - 3:00 • Sun: CLOSED</h4>
+                            <p><a href="https://www.facebook.com/TaqueriaChavezLasCrucesNM/?fref=ts"><i class="fa fa-facebook" aria-hidden="true"></i></a> • <a class="a-white" href="https://www.instagram.com/taqueriachavezllc/"><i class="fa fa-instagram" aria-hidden="true"></i></a> • <a class="a-white" href="https://twitter.com/taqueriachavez"><i class="fa fa-twitter" aria-hidden="true"></i></a> • <a class="a-white" href="https://www.yelp.com/biz/taqueria-chavez-las-cruces"><i class="fa fa-yelp" aria-hidden="true"></i></a></p>
+                        </div>
+                    </div>
+                </div>
+                <ul class="slides">
+                    <!--<li style="background-image: url(images/Gallery/pic1.jpg);" data-stellar-background-ratio="0.5"></li>-->
+                    <!--<li style="background-image: url(images/Gallery/pic4.jpg);" data-stellar-background-ratio="0.5"></li>-->
+                    <!--<li style="background-image: url(images/Gallery/pic10.jpg);" data-stellar-background-ratio="0.5"></li>-->
+                    <li style="background-image: url(images/Gallery/pic14.jpg);" data-stellar-background-ratio="0.5"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="js-sticky">
+            <div class="fh5co-main-nav">
+                <div class="container-fluid">
+                    <div class="fh5co-menu-1">
+                        <a href="#" data-nav-section="home">Home</a>
+                        <a href="#" data-nav-section="about">About</a>
+                        <a href="#" data-nav-section="features">Features</a>
+                    </div>
+                    <div class="fh5co-logo">
+                        <a href="index.html">Taqueria Chavez</a>
+                    </div>
+                    <div class="fh5co-menu-2">
+                        <a href="#" data-nav-section="menu">Menu</a>
+                        <a href="#" data-nav-section="events">Events</a>
+                        <a href="#" data-nav-section="reservation">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="fh5co-about" data-section="about">
+            <div class="fh5co-2col fh5co-bg to-animate-2" style="background-image: url(images/Gallery/pic22.jpg)"></div>
+            <div class="fh5co-2col fh5co-text">
+                <h2 class="heading to-animate">About Us</h2>
+                <p class="to-animate"><span class="firstcharacter">T</span>here is something about authentic Mexican food that makes the taste buds and appetite run wild. We are proud to be a family-owned and operated business, and we look forward to sharing our warm hospitality as we serve delicious food that you will not easily forget.</p>
+            </div>
+        </div>
+        <div id="fh5co-sayings">
+            <div class="container">
+                <div class="row to-animate">
+                    <div class="flexslider">
+                        <ul class="slides">
+                            <!--<li>-->
+                            <!--	<blockquote>-->
+                            <!--		<p>&ldquo;Wednesday(November 7th) is the last day of our Wayback Wednesday($1.50 taco special)&rdquo;</p>-->
+                            <!--<p class="quote-author">&mdash; Gonzalo Chavez(owner)</p>-->
+                            <!--	</blockquote>-->
+                            <!--</li>-->
+                            <li>
+                                <blockquote>
+                                    <p>&ldquo;Did you know that most customers order 4 tacos?&rdquo;</p>
+                                    <!--<p class="quote-author">&mdash; Gonzalo Chavez(owner)</p>-->
+                                </blockquote>
+                            </li>
+                            <li>
+                                <blockquote>
+                                    <p>&ldquo;Our Quesadillas were the best selling product of October.&rdquo;</p>
+                                    <!--<p class="quote-author">&mdash; Gonzalo Chavez(owner)</p>-->
+                                </blockquote>
+                            </li>
+                            <li>
+                                <blockquote>
+                                    <p>&ldquo;Our Nachos were the biggest sellers during the World Cup!&rdquo;</p>
+                                    <!--<p class="quote-author">&mdash; Gonzalo Chavez(owner)</p>-->
+                                </blockquote>
+                            </li>
+                            <li>
+                                <blockquote>
+                                    <p>&ldquo;We've been in business for over 15 years!&rdquo;</p>
+                                    <!--<p class="quote-author">&mdash; Gonzalo Chavez(owner)</p>-->
+                                </blockquote>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="fh5co-featured" data-section="features">
+            <div class="container">
+                <div class="row text-center fh5co-heading row-padded">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2 class="heading to-animate">Featured Dishes</h2>
+                        <p class="sub-heading to-animate">Our most popular dishes</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="fh5co-grid">
+                        <div class="fh5co-v-half to-animate-2">
+                            <div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(images/Gallery/pic25.jpg)"></div>
+                            <div class="fh5co-v-col-2 fh5co-text fh5co-special-1 arrow-left">
+                                <h2>Quesadilla Tacos</h2>
+                                <span class="pricing">$2.50</span>
+                            </div>
+                        </div>
+                        <div class="fh5co-v-half">
+                            <div class="fh5co-h-row-2 to-animate-2">
+                                <div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(images/Gallery/pic7.jpg)"></div>
+                                <div class="fh5co-v-col-2 fh5co-text arrow-left">
+                                    <h2>Tacos De Carne Asada</h2>
+                                    <span class="pricing">$2.05</span>
+                                </div>
+                            </div>
+                            <div class="fh5co-h-row-2 fh5co-reversed to-animate-2">
+                                <div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(images/Gallery/pic8.jpg)"></div>
+                                <div class="fh5co-v-col-2 fh5co-text arrow-right">
+                                    <h2>Tacos De Barbacoa</h2>
+                                    <span class="pricing">$2.05</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fh5co-v-half">
+                            <div class="fh5co-h-row-2 fh5co-reversed to-animate-2">
+                                <div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(images/Gallery/pic9.jpg)"></div>
+                                <div class="fh5co-v-col-2 fh5co-text arrow-right">
+                                    <h2>Shrimp Cocktail</h2>
+                                    <span class="pricing">$10.99</span>
+                                </div>
+                            </div>
+                            <div class="fh5co-h-row-2 to-animate-2">
+                                <div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(images/Gallery/pic10.jpg)"></div>
+                                <div class="fh5co-v-col-2 fh5co-text arrow-left">
+                                    <h2>Quesadillas de Al Pastor</h2>
+                                    <span class="pricing">$6.50</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fh5co-v-half to-animate-2">
+                            <div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(images/Gallery/pic17.jpg)"></div>
+                            <div class="fh5co-v-col-2 fh5co-text fh5co-special-1 arrow-left">
+                                <h2>Shrimp Tacos</h2>
+                                <span class="pricing">$3.05</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div id="fh5co-type" style="background-image: url(images/slide_3.jpg);" data-stellar-background-ratio="0.5">-->
+        <!--	<div class="fh5co-overlay"></div>-->
+        <!--	<div class="container">-->
+        <!--		<div class="row">-->
+        <!--			<div class="col-md-3 to-animate">-->
+        <!--				<div class="fh5co-type">-->
+        <!--					<h3 class="with-icon icon-1">Fresh Items</h3>-->
+        <!--					<p>We only use fresh items to ensure that our product is as fresh as possible.</p>-->
+        <!--				</div>-->
+        <!--			</div>-->
+        <!--			<div class="col-md-3 to-animate">-->
+        <!--				<div class="fh5co-type">-->
+        <!--					<h3 class="with-icon icon-2">Seafood</h3>-->
+        <!--					<p>We provide our customers with quality prepared Shrimp by preparing their dishes when they order.</p>-->
+        <!--				</div>-->
+        <!--			</div>-->
+        <!--			<div class="col-md-3 to-animate">-->
+        <!--				<div class="fh5co-type">-->
+        <!--					<h3 class="with-icon icon-3">Vegetables</h3>-->
+        <!--					<p>Fresh vegetables purchased earlier in the day to ensure every item that goes out our window is fresh.</p>-->
+        <!--				</div>-->
+        <!--			</div>-->
+        <!--			<div class="col-md-3 to-animate">-->
+        <!--				<div class="fh5co-type">-->
+        <!--					<h3 class="with-icon icon-4">Meat</h3>-->
+        <!--					<p>We get quality meat to provide an exceptional taste.</p>-->
+        <!--				</div>-->
+        <!--			</div>-->
+        <!--		</div>-->
+        <!--	</div>-->
+        <!--</div>-->
+        <div id="fh5co-menus" data-section="menu">
+            <div class="container">
+                <div class="row text-center fh5co-heading row-padded">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2 class="heading to-animate">Food Menu</h2>
+                        <p class="sub-heading to-animate">Freshly made food at affordable prices.</p>
+                    </div>
+                </div>
+                <!-- If you would like to customize the button, remove or change the "class" attribute inside the <span> tag -->
+                <center><span class="glf-button" data-glf-cuid="9d2e9d6a-00ef-4f5a-8b6b-5e4db128a69f" data-glf-ruid="4a23eb5d-069d-4733-b6ec-94772023cf28">Online Ordering</span>
+                <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script></center>
+                <div class="row row-padded">
+                    <div class="col-md-4">
+                        <div class="fh5co-food-menu to-animate-2">
+                            <h2>Mexican Food</h2>
+                            <ul>
+                                <li>
+                                    <div class="fh5co-food-desc">
+                                        <figure>
+                                            <a href="#menu" class="pop"><img src="images/Gallery/pic1.jpg" class="img-responsive"></a>
+                                            <p style="font-size:60%;">Click to enlarge</p>
+                                        </figure>
+                                        <div>
+                                            <h3>Tacos</h3>
+                                            <p><strong>Meat Choices:</strong> Carne Asada, Al Pastor, Barbacoa and Chicken</p>
+                                            <br />
+                                            <p><strong>Description:</strong> The Tacos garnished with pieces of onions and cilantro and drizzled with hot sauce. Each taco is made with corn tortillas.</p>
+                                            <!--<p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Nutritional Info</button></p>-->
+                                        </div>
+                                    </div>
+                                    <div class="fh5co-food-pricing">
+                                        $2.05
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fh5co-food-desc">
+                                        <figure>
+                                            <a href="#menu" class="pop"><img src="images/Gallery/pic25.jpg" class="img-responsive"></a>
+                                            <p style="font-size:60%;">Click to enlarge</p>
+                                        </figure>
+                                        <div>
+                                            <h3>Quesadilla Tacos</h3>
+                                            <p><strong>Meat Choices:</strong> Carne Asada, Al Pastor, Barbacoa and Chicken</p>
+                                            <br />
+                                            <p><strong>Description:</strong> Our Quesadilla Tacos are garnished with pieces of onions and cilantro and drizzled with hot sauce. Each taco is made with corn tortillas.</p>
+                                            <!--<p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Nutritional Info</button></p>-->
+                                        </div>
+                                    </div>
+                                    <div class="fh5co-food-pricing">
+                                        $2.50
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fh5co-food-desc">
+                                        <figure>
+                                            <a href="#menu" class="pop"><img src="images/Gallery/pic11.jpg" class="img-responsive"></a>
+                                            <p style="font-size:60%;">Click to enlarge</p>
+                                        </figure>
+                                        <div>
+                                            <h3>Taco Combo</h3>
+                                            <p><strong>Meat Choices:</strong> Carne Asada, Al Pastor, Barbacoa and Chicken</p>
+                                            <br />
+                                            <p><strong>Description:</strong> Each Taco Plate comes with 3 Tacos with any meat choice and a side of rice and beans. The tacos are garnished with pieces of onions and cilantro and drizzled with hot sauce. Each taco is made with corn tortillas.</p>
+                                            <!--<p><button type="button" class="btn btn-primary">Nutritional Info</button></p>-->
+                                        </div>
+                                    </div>
+                                    <div class="fh5co-food-pricing">
+                                        $8.99
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fh5co-food-desc">
+                                        <figure>
+                                            <a href="#menu" class="pop"><img src="images/Gallery/pic14.jpg" class="img-responsive"></a>
+                                            <p style="font-size:60%;">Click to enlarge</p>
+                                        </figure>
+                                        <div>
+                                            <h3>Burrito</h3>
+                                            <p><strong>Meat Choices:</strong> Carne Asada, Al Pastor, Barbacoa and Chicken</p>
+                                            <br />
+                                            <p><strong>Description:</strong> We use a 12" flour tortilla for each burrito. The burritos come with your choice of meat, rice, beans, onions, cilantro, hot sauce, and shredded lettuce.</p>
+                                            <!--<p><button type="button" class="btn btn-primary">Nutritional Info</button></p>-->
+                                        </div>
+                                    </div>
+                                    <div class="fh5co-food-pricing">
+                                        $5.50
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fh5co-food-desc">
+                                        <figure>
+                                            <a href="#menu" class="pop"><img src="images/Gallery/pic16.jpg" class="img-responsive"></a>
+                                            <p style="font-size:60%;">Click to enlarge</p>
+                                        </figure>
+                                        <div>
+                                            <h3>Tortas</h3>
+                                            <p><strong>Meat Choices:</strong> Carne Asada, Al Pastor, Barbacoa and Chicken</p>
+                                            <br />
+                                            <p><strong>Description:</strong> The bread is toasted with mayonnaise, we put beans, your choice of meat, cheese, onions, cilantro, hot sauce, pieces of avocado and shredded lettuce.</p>
+                                            <!--<p><button type="button" class="btn btn-primary">Nutritional Info</button></p>-->
+                                        </div>
+                                    </div>
+                                    <div class="fh5co-food-pricing">
+                                        $5.50
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fh5co-food-desc">
+                                        <figure>
+                                            <a href="#menu" class="pop"><img src="images/Gallery/pic10.jpg" class="img-responsive"></a>
+                                            <p style="font-size:60%;">Click to enlarge</p>
+                                        </figure>
+                                        <div>
+                                            <h3>Super Quesadillas</h3>
+                                            <p><strong>Meat Choices:</strong> Carne Asada, Al Pastor and Chicken</p>
+                                            <br />
+                                            <p><strong>Description:</strong> We use a 12" flour tortilla for each quesadilla. The quesadillas come with a layer of mixed Monterey and Cheddar cheese, your choice of meat[Carne Asada, Al Pastor, or Pollo], onions, cilantro, hot sauce, shredded lettuce and another layer of cheese. We fold the tortilla in half, coat the top with mayonnaise and grill it until it becomes crunchy.</p>
+                                            <!--<p><button type="button" class="btn btn-primary">Nutritional Info</button></p>-->
+                                        </div>
+                                    </div>
+                                    <div class="fh5co-food-pricing">
+                                        $6.50
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fh5co-food-desc">
+                                        <figure>
+                                            <a href="#menu" class="pop"><img src="images/Gallery/pic24.jpg" class="img-responsive"></a>
+                                            <p style="font-size:60%;">Click to enlarge</p>
+                                        </figure>
+                                        <div>
+                                            <h3>Fajitas de Pollo</h3>
+                                            <p><strong>Description:</strong> The chicken is cooked with onions, tomatoes, bell peppers and jalapeños. Once the chicken and veggies are cooked, it's drizzled with a special red sauce. The plate comes with a side of rice,beans and a flour tortilla.</p>
+                                            <!--<p><button type="button" class="btn btn-primary">Nutritional Info</button></p>-->
+                                        </div>
+                                    </div>
+                                    <div class="fh5co-food-pricing">
+                                        $10.99
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fh5co-food-desc">
+                                        <figure>
+                                            <a href="#menu" class="pop"><img src="images/Gallery/pic15.jpg" class="img-responsive"></a>
+                                            <p style="font-size:60%;">Click to enlarge</p>
+                                        </figure>
+                                        <div>
+                                            <h3>Steak Ranchero</h3>
+                                            <p><strong>Description:</strong> The Carne Asada meat is cooked with onions, tomatoes, bell peppers and jalapeños. Once the meat and veggies are cooked, it's drizzled with a special red sauce. The plate comes with a side of rice, beans and a flour tortilla.</p>
+                                            <!--<p><button type="button" class="btn btn-primary">Nutritional Info</button></p>-->
+                                        </div>
+                                    </div>
+                                    <div class="fh5co-food-pricing">
+                                        $10.99
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fh5co-food-desc">
+                                        <figure>
+                                            <a href="#menu" class="pop"><img src="images/Gallery/pic19.jpg" class="img-responsive"></a>
+                                            <p style="font-size:60%;">Click to enlarge</p>
+                                        </figure>
+                                        <div>
+                                            <h3>Super Nachos</h3>
+                                            <p><strong>Meat Choices:</strong> Carne Asada, Al Pastor and Chicken</p>
+                                            <br />
+                                            <p><strong>Description:</strong> We create layered nachos meaning that we first put a layer of chips, followed by the first layer of cheese, followed by another layer of chips. After the preparation layers are set, we put some beans, choice of meat, another layer of cheese to make sure it's a cheesey experience. We then add the toppings which are onions, cilantro, and hot sauce of choice to your nachos.</p>
+                                            <!--<p><button type="button" class="btn btn-primary">Nutritional Info</button></p>-->
+                                        </div>
+                                    </div>
+                                    <div class="fh5co-food-pricing">
+                                        $9.50
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="fh5co-food-menu to-animate-2">
+                            <h2>Seafood/Mariscos</h2>
+                            <ul>
+                                <li>
+                                    <div class="fh5co-food-desc">
+                                        <figure>
+                                            <a href="#menu" class="pop"><img src="images/Gallery/pic17.jpg" class="img-responsive"></a>
+                                            <p style="font-size:60%;">Click to enlarge</p>
+                                        </figure>
+                                        <div>
+                                            <h3>Tacos de Camaron</h3>
+                                            <p><strong>Description:</strong> The tacos are made with corn tortillas. The shrimp is grilled and the taco is garnished with onions, cilantro and hot sauce.</p>
+                                            <!--<p><button type="button" class="btn btn-primary">Nutritional Info</button></p>-->
+                                        </div>
+                                    </div>
+                                    <div class="fh5co-food-pricing">
+                                        $3.05
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fh5co-food-desc">
+                                        <figure>
+                                            <a href="#menu" class="pop"><img src="images/Gallery/pic20.jpg" class="img-responsive"></a>
+                                            <p style="font-size:60%;">Click to enlarge</p>
+                                        </figure>
+                                        <div>
+                                            <h3>Tostada de Camaron</h3>
+                                            <p><strong>Description:</strong> The Tostada de Camaron is made with shrimp, tomatoes, cucumbers, onions and cilantro, and mixed with our secret sauce.It comes with a side of tortilla chips.</p>
+                                            <!--<p><button type="button" class="btn btn-primary">Nutritional Info</button></p>-->
+                                        </div>
+                                    </div>
+                                    <div class="fh5co-food-pricing">
+                                        $9.99
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fh5co-food-desc">
+                                        <figure>
+                                            <a href="#menu" class="pop"><img src="images/Gallery/pic9.jpg" class="img-responsive"></a>
+                                            <p style="font-size:60%;">Click to enlarge</p>
+                                        </figure>
+                                        <div>
+                                            <h3>Shrimp Cocktail</h3>
+                                            <p><strong>Description:</strong> The shrimp cocktail is made with large shrimp, diced cucumber and tomatoes, onions, and cilantro. The shrimp and veggies are mixed in a special tomato juice and garnished with diced avocado.</p>
+                                            <!--<p><button type="button" class="btn btn-primary">Nutritional Info</button></p>-->
+                                        </div>
+                                    </div>
+                                    <div class="fh5co-food-pricing">
+                                        $10.99
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fh5co-food-desc">
+                                        <figure>
+                                            <a href="#menu" class="pop"><img src="images/Gallery/pic13.jpg" class="img-responsive"></a>
+                                            <p style="font-size:60%;">Click to enlarge</p>
+                                        </figure>
+                                        <div>
+                                            <h3>Quesadilla de Camaron</h3>
+                                            <p><strong>Description:</strong> We use a 12" flour tortilla for each quesadilla. The quesadillas come with a layer of mixed Monterey and Cheddar cheese, grilled shrimp, onions, cilantro, hot sauce, shredded lettuce and another layer of cheese. We fold the tortilla in half, coat the top with mayonnaise and grill it until it becomes crunchy.</p>
+                                            <!--<p><button type="button" class="btn btn-primary">Nutritional Info</button></p>-->
+                                        </div>
+                                    </div>
+                                    <div class="fh5co-food-pricing">
+                                        $10.50
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fh5co-food-desc">
+                                        <figure>
+                                            <a href="#menu" class="pop"><img src="images/Gallery/pic23.jpg" class="img-responsive"></a>
+                                            <p style="font-size:60%;">Click to enlarge</p>
+                                        </figure>
+                                        <div>
+                                            <h3>Camarones Rancheros</h3>
+                                            <p><strong>Description:</strong> The Shrimp is grilled with onions, tomatoes, bell peppers and jalapeños. Once the shrimp and veggies are cooked, it's drizzled with a special red sauce. The plate comes with a side of rice and beans.</p>
+                                            <!--<p><button type="button" class="btn btn-primary">Nutritional Info</button></p>-->
+                                        </div>
+                                    </div>
+                                    <div class="fh5co-food-pricing">
+                                        $11.50
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fh5co-food-desc">
+                                        <figure>
+                                            <a href="#menu" class="pop"><img src="images/Gallery/pic21.jpg" class="img-responsive"></a>
+                                            <p style="font-size:60%;">Click to enlarge</p>
+                                        </figure>
+                                        <div>
+                                            <h3>Camarones a la Diabla</h3>
+                                            <p><strong>Description:</strong> The Shrimp is grilled with onions, tomatoes, bell peppers and jalapeños. Once the shrimp and veggies are cooked, it's drizzled with a special red sauce. The plate comes with a side of rice and beans.</p>
+                                            <!--<p><button type="button" class="btn btn-primary">Nutritional Info</button></p>-->
+                                        </div>
+                                    </div>
+                                    <div class="fh5co-food-pricing">
+                                        $11.50
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="fh5co-food-menu to-animate-2">
+                            <h2>Breakfast</h2>
+                            <ul>
+                                <li>
+                                    <div class="fh5co-food-desc">
+                                        <figure>
+                                            <a href="#menu" class="pop"><img src="images/Gallery/pic26.jpg" class="img-responsive"></a>
+                                            <p style="font-size:60%;">Click to enlarge</p>
+                                        </figure>
+                                        <div>
+                                            <h3>Tacos de Chorizo and potatoes</h3>
+                                            <p><strong>Description:</strong> The tacos are made with corn tortillas. The items are freshly prepared at the time of ordering and the taco is garnished with onions, cilantro and hot sauce.</p>
+                                            <!--<p><button type="button" class="btn btn-primary">Nutritional Info</button></p>-->
+                                        </div>
+                                    </div>
+                                    <div class="fh5co-food-pricing">
+                                        $1.75
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fh5co-food-desc">
+                                        <figure>
+                                            <a href="#menu" class="pop"><img src="images/Gallery/pic27.jpg" class="img-responsive"></a>
+                                            <p style="font-size:60%;">Click to enlarge</p>
+                                        </figure>
+                                        <div>
+                                            <h3>Tacos de Ham and Egg</h3>
+                                            <p><strong>Description:</strong> The tacos are made with corn tortillas. The items are freshly prepared at the time of ordering and the taco is garnished with onions, cilantro and hot sauce.</p>
+                                            <!--<p><button type="button" class="btn btn-primary">Nutritional Info</button></p>-->
+                                        </div>
+                                    </div>
+                                    <div class="fh5co-food-pricing">
+                                        $1.75
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fh5co-food-desc">
+                                        <figure>
+                                            <a href="#menu" class="pop"><img src="images/Gallery/pic28.jpg" class="img-responsive"></a>
+                                            <p style="font-size:60%;">Click to enlarge</p>
+                                        </figure>
+                                        <div>
+                                            <h3>Tacos de Chorizo and Egg</h3>
+                                            <p><strong>Description:</strong> The tacos are made with corn tortillas. The items are freshly prepared at the time of ordering and the taco is garnished with onions, cilantro and hot sauce.</p>
+                                            <!--<p><button type="button" class="btn btn-primary">Nutritional Info</button></p>-->
+                                        </div>
+                                    </div>
+                                    <div class="fh5co-food-pricing">
+                                        $1.75
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fh5co-food-desc">
+                                        <figure>
+                                            <a href="#menu" class="pop"><img src="images/Gallery/pic14.jpg" class="img-responsive"></a>
+                                            <p style="font-size:60%;">Click to enlarge</p>
+                                        </figure>
+                                        <div>
+                                            <h3>Breakfast Burritos</h3>
+                                            <p>Choices: Chorizo and Egg, Ham and Egg, Chorizo and Potatoes</p>
+                                            <p><strong>Description:</strong> The tacos are made with corn tortillas. The items are freshly prepared at the time of ordering and the taco is garnished with onions, cilantro and hot sauce.</p>
+                                            <!--<p><button type="button" class="btn btn-primary">Nutritional Info</button></p>-->
+                                        </div>
+                                    </div>
+                                    <div class="fh5co-food-pricing">
+                                        $3.99
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="fh5co-events" data-section="events" style="background-image: url(images/slide_2.jpg);" data-stellar-background-ratio="0.5">
+            <div class="fh5co-overlay"></div>
+            <div class="container">
+                <div class="row text-center fh5co-heading row-padded">
+                    <div class="col-md-8 col-md-offset-2 to-animate">
+                        <h2 class="heading">Upcoming Events</h2>
+                        <p class="sub-heading">Here are some upcoming events.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="fh5co-event to-animate-2">
+                            <h3>Come try our Quesadilla Tacos!</h3>
+                            <span class="fh5co-event-meta">Price: $2.50</span>
+                            <img src="images/Gallery/pic25.jpg" class="img-responsive">
+                            <p>It's our newest Menu item.</p>
+                        </div>
+                    </div>
+                    <!--<div class="col-md-4">-->
+                    <!--	<div class="fh5co-event to-animate-2">-->
+                    <!--		<h3></h3>-->
+                    <!--		<span class="fh5co-event-meta"></span>-->
+                    <!--		<p></p>-->
+                    <!--		<p><a href="#" class="btn btn-primary btn-outline">Read More</a></p>-->
+                    <!--	</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-md-4">-->
+                    <!--	<div class="fh5co-event to-animate-2">-->
+                    <!--		<h3></h3>-->
+                    <!--		<span class="fh5co-event-meta"></span>-->
+                    <!--		<p></p>-->
+                    <!--		<p><a href="#" class="btn btn-primary btn-outline">Read More</a></p>-->
+                    <!--	</div>-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+        <div id="fh5co-contact" data-section="reservation">
+            <div class="container">
+                <div class="row text-center fh5co-heading row-padded">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2 class="heading to-animate">Contact Us</h2>
+                        <p class="sub-heading to-animate">Message us directly to our Facebook Messenger if you have any questions!</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 to-animate-2">
+                        <h3>Contact Info</h3>
+                        <ul class="fh5co-contact-info">
+                            <li class="fh5co-contact-address ">
+                                <i class="icon-home"></i>
+                                1400 East Lohman<br>Las Cruces, New Mexico 88007
+                            </li>
+                            <li><i class="icon-phone"></i> (575) 650-2847</li>
+                            <li><i class="icon-envelope"></i>taqueriachavez575@gmail.com</li>
+                            <li><i class="icon-globe"></i> <a href="https://taqueriachavez.com" target="_blank">taqueriachavez.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 to-animate-2">
+                        <h3>Signup to our Newsletter!</h3>
+                        <!-- Begin Mailchimp Signup Form -->
+                        <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+                        <style type="text/css">
+                            #mc_embed_signup {
+                                background: #fff;
+                                clear: left;
+                                font: 14px Helvetica, Arial, sans-serif;
+                            }
+
+                            /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+                                 We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                        </style>
+                        <div id="mc_embed_signup">
+                            <form action="https://taqueriachavez.us19.list-manage.com/subscribe/post?u=47eeda9f00f8297deb5752074&amp;id=aaee0b0ee3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                <div id="mc_embed_signup_scroll">
+                                    <label for="mce-EMAIL">Sign up to get the latest news and specials!</label>
+                                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_47eeda9f00f8297deb5752074_aaee0b0ee3" tabindex="-1" value=""></div>
+                                    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                                </div>
+                            </form>
+                        </div>
+                        <!--End mc_embed_signup-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="fh5co-footer">
+        <div class="container">
+            <div class="row row-padded">
+                <div class="col-md-12 text-center">
+                    <p class="to-animate">&copy; 2018 Taqueria Chavez LLC
+                    </p>
+                    <p class="text-center to-animate"><a href="#" class="js-gotop">Go To Top</a></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <ul class="fh5co-social">
+                        <li class="to-animate-2"><a href="https://www.facebook.com/TaqueriaChavezLasCrucesNM/?fref=ts"><i class="icon-facebook"></i></a></li>
+                        <li class="to-animate-2"><a href="https://twitter.com/taqueriachavez"><i class="icon-twitter"></i></a></li>
+                        <li class="to-animate-2"><a href="https://www.yelp.com/biz/taqueria-chavez-las-cruces"><i class="icon-yelp"></i></a></li>
+                        <li class="to-animate-2"><a href="https://www.instagram.com/taqueriachavezllc/"><i class="icon-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <img src="" class="imagepreview" style="width: 100%;">
+                </div>
+            </div>
+        </div>
+        <!-- jQuery -->
+        <script src="js/jquery.min.js"></script>
+        <!-- jQuery Easing -->
+        <script src="js/jquery.easing.1.3.js"></script>
+        <!-- Bootstrap -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Bootstrap DateTimePicker -->
+        <script src="js/moment.js"></script>
+        <script src="js/bootstrap-datetimepicker.min.js"></script>
+        <!-- Waypoints -->
+        <script src="js/jquery.waypoints.min.js"></script>
+        <!-- Stellar Parallax -->
+        <script src="js/jquery.stellar.min.js"></script>
+        <!-- Flexslider -->
+        <script src="js/jquery.flexslider-min.js"></script>
+        <script>
+            $(function() {
+                $('#date').datetimepicker();
+            });
+        </script>
+        <script>
+            $(function() {
+                $('.pop').on('click', function() {
+                    $('.imagepreview').attr('src', $(this).find('img').attr('src'));
+                    $('#imagemodal').modal('show');
+                });
+            });
+        </script>
+        <!-- Main JS -->
+        <script src="js/main.js"></script>
+        <script src="/js/app/controllers/index.js"></script>
+</body>
+
+</html>
